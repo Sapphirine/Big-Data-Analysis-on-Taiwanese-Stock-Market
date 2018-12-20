@@ -1,1 +1,10 @@
 # Big-Data-Analysis-on-Taiwanese-Stock-Market
+
+### Abstract
+####  Since people want to make the maximum profit from the investment of stock markets, this project will focus on analyzing data from the website of Taiwan Stock Exchange Corporation. We believe that the predictions and trend of stock prices can be made via big data analysis. We will introduce some API to illustrate how we fetched the data and built the analysis system. Then, some results made by using some regression algorithms and some specific calculations will be shown. Finally, we made an interface through HTML for users to easily access the results of data analysis.
+### ALGORITHM
+####  For API tools, beside Numpy and Pandas, which are basic tools for data analysis, we first used String IO, which sent request to the website of TWSE, let us crawl data, and output a csv file. Then, we also made use of TA-lib to compute exponential moving average (EMA). Finally, Matplotlib (especially MPL.Finance) helped us to plot the trend of stock prices and candlestick charts.
+####  We used three kinds of typical regression. First of all, Linear Regression is a regression which predicts a response Y on the basis of a single predictor X assuming that there is approximately a linear relationship between X and Y. On top of that, Decision Tree Regression composed of edges and nodes to represent possible paths for prediction. Third, Random Forest Regression is an ensemble of untrained Decision Trees with several bootstrap samples.
+####  Among the EMA cruves, we choice pairs of them to conduct a double coverover method. That is, buy the stock at golden cross and sell the stock at death cross. Then, select the pair of EMA cruvess which can generate highest ROI.  
+### Result
+#### The python program will generate jpg files of candelstick plots of stock whichs fit the defined criteria, and csv file with the stock id, transaction number, ROI and winrate. With the javascript and html code, we can mount the interface online. In that website, we can select the stock id, then the transaction information and candelstick polt will be shown.
